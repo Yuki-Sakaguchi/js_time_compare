@@ -1,0 +1,12 @@
+//*=====================
+//  mixin
+//=====================*/
+
+//
+// remとpxを使ったfont-size設定(IE対応)
+// @param $size
+// @pagam $rhythm-unit
+//
+@mixin origin-font-size($size, $rhythm-unit: "rem") {
+    @include output-rhythm(font-size, convert-length($size, $rhythm-unit));
+}

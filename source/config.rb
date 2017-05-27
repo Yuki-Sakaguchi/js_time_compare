@@ -7,9 +7,10 @@ css_dir = "../css"
 sass_dir = "sass"
 images_dir = "../images"
 javascripts_dir = "../js"
-output_style = :compressed
 line_comments = false
-# cache = false
+output_style = :expanded
+#output_style = :compressed
+#cache = false
 
 # cache cleear command -> compass clean
 
