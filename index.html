@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>TITLE</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./css/main.css">
-<!--[if lt IE 9]>
-<script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-</head>
-<body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-</body>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Javascriptで日付の比較</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <script src="./js/main.js"></script>
+    <script>
+    window.addEventListener('load', function() {
+      // 比較のベースとなる日付を設定
+      var baseDate = new CompareDate("2018", "2", "1");
+
+      // インスタンスの情報を取得
+      baseDate.getDate();
+
+      // 引数の日付とインスタンスの日付を比較し、関数を実行
+      baseDate.compare("2018", "1", "1", 
+      function() {
+        console.log("引数の値が大きい場合に動く処理");
+      }, 
+      function() {
+        console.log("インスタンスの値が大きい場合に動く処理");
+      });
+    });
+    </script>
+  </body>
 </html>
